@@ -11,5 +11,11 @@ jobs:
       - name: Checkout repository content
         uses: actions/checkout@v2
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.1
+      
+      - name: Run
+        run: node src/frontend/app.js
+      
       - name: Print app.js
         run: cat src/frontend/app.js
